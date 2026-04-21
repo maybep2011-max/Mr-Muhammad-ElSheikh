@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mr. Mohamed El Sheikh</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ede9ff,#ffffff);
+padding:20px;
+text-align:center;
+}
+
+/* الصورة */
+.profile img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #fff;
+box-shadow:0 20px 50px rgba(0,0,0,0.2);
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+100%{transform:translateY(0)}
+}
+
+/* الاسم */
+.name{
+font-size:28px;
+margin-top:15px;
+color:#6a0dad;
+font-weight:bold;
+}
+
+.name span{
+display:block;
+font-size:16px;
+color:#888;
+}
+
+/* زر واتساب */
+.whatsapp{
+margin-top:20px;
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:14px 28px;
+background:linear-gradient(135deg,#25D366,#128C7E);
+color:#fff;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 10px 25px rgba(37,211,102,0.4);
+animation:pulse 2s infinite;
+transition:0.3s;
+}
+
+.whatsapp:active{
+transform:scale(0.95);
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6)}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+/* كارت */
+.card{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(15px);
+margin-top:25px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+text-align:right;
+}
+
+/* معلومات */
+.info div{
+margin:8px 0;
+}
+
+/* عناوين */
+.stage-title{
+color:#fff;
+padding:12px;
+border-radius:12px;
+margin-bottom:10px;
+font-weight:bold;
+}
+
+.prep{
+background:linear-gradient(135deg,#6a0dad,#8a2be2);
+}
+
+.sec{
+background:linear-gradient(135deg,#25D366,#00c853);
+}
+
+/* الصفوف */
+.row{
+display:flex;
+justify-content:space-between;
+background:#fff;
+padding:14px;
+border-radius:12px;
+margin-bottom:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:0.2s;
+}
+
+.row:active{
+transform:scale(0.96);
+background:#f3eaff;
+}
+
+/* الآراء */
+.review{
+background:#fff;
+padding:12px;
+border-radius:12px;
+margin:8px 0;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+opacity:0;
+transform:translateY(20px);
+animation:fade 0.5s forwards;
+}
+
+.review:nth-child(1){animation-delay:0.2s}
+.review:nth-child(2){animation-delay:0.4s}
+.review:nth-child(3){animation-delay:0.6s}
+.review:nth-child(4){animation-delay:0.8s}
+.review:nth-child(5){animation-delay:1s}
+.review:nth-child(6){animation-delay:1.2s}
+
+@keyframes fade{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- الصورة -->
+<div class="profile">
+<img src="teacher.jpg">
+</div>
+
+<!-- الاسم -->
+<div class="name">
+مستر محمد الشيخ
+<span>Mr. Mohamed El Sheikh</span>
+</div>
+
+<!-- زر واتساب -->
+<a class="whatsapp" 
+href="https://wa.me/201010696054?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A8%D8%B1%D9%83%D8%A7%D8%AA%D9%87%20%D9%85%D8%B3%D8%AA%D8%B1%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D8%AD%D8%AC%D8%B2%20%D9%85%D8%B9%20%D8%AD%D8%B6%D8%B1%D8%AA%D9%83">
+
+<svg width="20" height="20" viewBox="0 0 32 32" fill="white">
+<path d="M16 3C9 3 3.5 8.5 3.5 15.2c0 2.3.6 4.5 1.8 6.5L3 29l7.5-2.2c1.9 1 4 1.5 6.2 1.5 7 0 12.5-5.5 12.5-12.2S23 3 16 3zm0 22c-2 0-4-.5-5.7-1.5l-.4-.2-4.5 1.3 1.3-4.3-.3-.4c-1-1.7-1.6-3.6-1.6-5.6C4.8 9 9.9 4 16 4s11.2 5 11.2 11.2S22.1 25 16 25z"/>
+</svg>
+
+احجز الآن
+</a>
+
+<!-- معلومات -->
+<div class="card">
+<h3>معلومات</h3>
+<div class="info">
+<div>📍 بيلا - شارع مكة</div>
+<div>📚 شرح مبسط وسهل</div>
+<div>🎯 تأسيس قوي لكل المراحل</div>
+<div>🚀 متابعة مستمرة</div>
+</div>
+</div>
+
+<!-- المواعيد -->
+<div class="card">
+<div class="stage-title prep">📚 المرحلة الإعدادية</div>
+<div class="row">أولى إعدادي <span>السبت 8:00</span></div>
+<div class="row">ثانية إعدادي <span>الأحد 10:00</span></div>
+<div class="row">ثالثة إعدادي <span>الإثنين 11:00</span></div>
+
+<div class="stage-title sec" style="margin-top:15px;">🎓 المرحلة الثانوية</div>
+<div class="row">أولى ثانوي <span>الثلاثاء 1:00</span></div>
+<div class="row">ثانية ثانوي <span>الأربعاء 2:00</span></div>
+<div class="row">ثالثة ثانوي <span>الخميس 3:00</span></div>
+</div>
+
+<!-- الآراء -->
+<div class="card">
+<h3>آراء الطلاب</h3>
+<div class="review">🔥 شرح ممتاز جدًا</div>
+<div class="review">💯 مستوايا اتحسن بسرعة</div>
+<div class="review">👏 أفضل مدرس</div>
+<div class="review">🚀 فرق كبير في الفهم</div>
+<div class="review">❤️ تعامل محترم جدًا</div>
+<div class="review">⭐ بيبسط المعلومة بشكل رهيب</div>
+</div>
+
+</body>
+</html>
